@@ -1,9 +1,25 @@
 #pragma once
 #include <iostream>
+#include <vector>
+using namespace std;
 
-// cout和printf来了都得叫爹
+/// @brief 打印
+/// @tparam ...Args
+/// @param ...args
 template <typename... Args>
 void print(Args... args)
 {
-    (std::cout << ... << args) << std::endl;
+    (cout << ... << args) << endl;
+}
+
+/// @brief 打印向量数组元素
+/// @tparam T
+/// @param v
+template <typename T>
+void print(vector<T>& v)
+{
+    for (auto i : v) {
+        cout << i << " ";
+    }
+    cout << endl;
 }
