@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <list>
 #include <vector>
 using namespace std;
 
@@ -17,6 +18,18 @@ void print(Args... args)
 /// @param v
 template <typename T>
 void print(vector<T>& v)
+{
+    for (auto i : v) {
+        cout << i << " ";
+    }
+    cout << endl;
+}
+
+/// @brief 打印双向链表元素
+/// @tparam T
+/// @param v
+template <typename T>
+void print(list<T>& v)
 {
     for (auto i : v) {
         cout << i << " ";
