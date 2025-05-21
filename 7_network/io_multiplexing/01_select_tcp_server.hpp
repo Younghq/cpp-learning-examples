@@ -21,6 +21,7 @@
 constexpr auto SERVER_PORT = 8099;
 constexpr auto MAX_CLIENTS = 10;
 constexpr auto BUFFER_SIZE = 1024;
+
 /** 操作fd_set的宏
  * FD_ZERO(fd_set *set);         清空集合
  * FD_SET(int fd, fd_set *set);  添加fd到集合
@@ -39,6 +40,7 @@ private:
 
 public:
   SelectTcpServer() {
+    printf("Select tcp server\n");
     // 初始化客户端fd数组为-1（无效值）
     for (auto &fd : client_fds_)
       fd = -1;
