@@ -1,1 +1,1 @@
-cpp_learning_examples
+cpp-learning-examples
