@@ -53,7 +53,8 @@ public:
   static SingletonLazy &GetInstance() {
     static SingletonLazy instance; // 线程安全的延迟初始化
     /**
-     * static 标识的局部变量存储在程序的静态存储区​（与全局变量相同），而非栈或堆。
+     * static
+     * 标识的局部变量存储在程序的静态存储区​（与全局变量相同），而非栈或堆。
      */
     return instance;
   }
@@ -63,5 +64,5 @@ public:
    *
    * 展示单例的功能接口。
    */
-  void Print() { std::cout << "hello" << std::endl; }
+  void Print() { std::cout << "Hello world,I`m lazy." << std::endl; }
 };
